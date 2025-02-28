@@ -48,7 +48,7 @@ else {
     const carros = ["Uno", "Gol", "Voyage"]
 
     console.log(carros(0))
-    console.log(carros(1))
+    console.log(carros(1)) 
 
     console.log("Quantas frutas tem no array")
     console.log (carros.length)
