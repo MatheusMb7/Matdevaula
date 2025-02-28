@@ -45,18 +45,18 @@ else {
 
     // arrays - listas
 
-    const frutas = ["Maçã", "Banana", "Uva"]
+    const carros = ["Uno", "Gol", "Voyage"]
 
-    console.log(frutas(0))
-    console.log(frutas(1))
+    console.log(carros(0))
+    console.log(carros(1))
 
     console.log("Quantas frutas tem no array")
-    console.log (frutas.length)
+    console.log (carros.length)
 
     frutas.push("Laranja")
     console.log("E agora quantas frutas tem no meu array")
-    console.log(frutas.length)
+    console.log(carros.length)
 
-    frutas.forEach(fruta => console.log(fruta))
+    carros.forEach(carro => console.log(carro))
 
-    frutas.pop
+    carros.pop
