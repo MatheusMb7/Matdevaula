@@ -63,7 +63,7 @@ else {
 
     carros.pop
     console.log(carros)
-    */
+    
 
     // objetos
     let pessoa = {
@@ -128,3 +128,5 @@ else {
     const res = calcularIMC(80,170)
 
     console.log(res)
+
+    */
