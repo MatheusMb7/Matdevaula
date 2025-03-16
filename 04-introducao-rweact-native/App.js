@@ -7,10 +7,10 @@ import { StyleSheet, Text, View, Button, Image } from 'react-native';
 export default function App() {
 
   // Lógica do componente
-  const nome = "Matheus Bruno"
+  const nome = "JULIANA RUTE"
 
   function alerta() {
-    alert("Vôce clicou no botão,agora é PALMEIRAS")
+    alert("Vôce é o amor da minha vidaa")
   }
 
   // retorno com SX
@@ -24,19 +24,16 @@ export default function App() {
       <Text>{2 + 2}</Text>
       <Text>{nome}</Text>
 
-      <Text>PALMEIIRAS!</Text>
-      <Text>PALMEIIRAS!</Text>
-      <Text>PALMEIIRAS!</Text>
-      <Text>PALMEIIRAS!</Text>
-      <Text>PALMEIIRAS!</Text>
+      <Text>O  que falar de vc, uma mulher tão perfeita tão maravilhosa, tão íncrivel, quero que daiba que sou erternamente grato e te amo demais, muito obrigado por tudoo!!!</Text>
+    
 
-      <Button title='Se clicar é Palmeirense' onPress={alerta}></Button>
+      <Button title='clique' onPress={alerta}></Button>
 
       <Image
-        source={{ uri: 'https://w7.pngwing.com/pngs/373/882/png-transparent-sociedade-esportiva-palmeiras-campeonato-brasileiro-serie-a-campeonato-paulista-sport-club-corinthians-paulista-paulista-derby-others.png' }}
-        style={{
-          height: 300,
-          width: 300
+         source={require('./assets/casal.jpg')}  // Caminho correto para a imagem
+         style={{ 
+           height: 300,  // Tamanho da imagem
+           width: 300,   // Tamanho da imagem
         }}
       />
 
@@ -49,7 +46,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00ff7f',
+    backgroundColor: '#C8A2C8',
     alignItems: 'center',
     justifyContent: 'center',
 
