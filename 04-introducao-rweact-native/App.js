@@ -34,10 +34,10 @@ export default function App() {
       <Button title='Clique' onPress={alerta}></Button>
 
       <Image
-         source={require('./assets/casal.jpg')}  // Caminho correto para a imagem
+         source={require('./assets/casal.jpg')} 
          style={{ 
-           height: 300,  // Tamanho da imagem
-           width: 300,   // Tamanho da imagem
+           height: 300,
+           width: 300,  
         }}
       />
 
