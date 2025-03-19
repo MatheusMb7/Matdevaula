@@ -10,12 +10,13 @@ export default function App() {
   const nome = "Aplicativo"
 
   function alerta() {
-    alert("Esse pe meu aplicativo")
+    alert("Esse é meu aplicativo")
   }
 
   // retorno com SX
   return (
     <View style={styles.container}>
+    
 
       {/* Comentario do template JSX */}
 
@@ -24,8 +25,8 @@ export default function App() {
       <Text>{2 + 2}</Text>
       <Text>{nome}</Text>
 
-      <Text>Palmeiras</Text>
-      <Text>Palmeiras</Text>
+      <Text style={style.textroGrande}>Palmeiras</Text>
+      <Text style={style.textroGrande}>Palmeiras</Text>
       <Text>Palmeiras</Text>
       <Text>Palmeiras</Text>
       <Text>Palmeiras</Text>
@@ -34,7 +35,7 @@ export default function App() {
       <Button title='Clique' onPress={alerta}></Button>
 
       <Image
-         source={require('./assets/casal.jpg')} 
+         source={require('./https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3a7GOY1P8SXeFJHnYmUHp3rUPb4ncmnBNg&s')} 
          style={{ 
            height: 300,
            width: 300,  
@@ -55,4 +56,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
   },
+  textoGrande: {
+    fontSize: 50,
+    fontWeight: 900,
+    fontStyle: 'italic'
+  }
 });
