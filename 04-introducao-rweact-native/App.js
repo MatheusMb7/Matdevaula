@@ -7,10 +7,10 @@ import { StyleSheet, Text, View, Button, Image } from 'react-native';
 export default function App() {
 
   // Lógica do componente
-  const nome = "JULIANA RUTE"
+  const nome = "Aplicativo"
 
   function alerta() {
-    alert("Vôce é o amor da minha vidaa")
+    alert("Esse pe meu aplicativo")
   }
 
   // retorno com SX
@@ -24,10 +24,14 @@ export default function App() {
       <Text>{2 + 2}</Text>
       <Text>{nome}</Text>
 
-      <Text>O  que falar de vc, uma mulher tão perfeita tão maravilhosa, tão íncrivel, quero que daiba que sou erternamente grato e te amo demais, muito obrigado por tudoo!!!</Text>
+      <Text>Palmeiras</Text>
+      <Text>Palmeiras</Text>
+      <Text>Palmeiras</Text>
+      <Text>Palmeiras</Text>
+      <Text>Palmeiras</Text>
     
 
-      <Button title='clique' onPress={alerta}></Button>
+      <Button title='Clique' onPress={alerta}></Button>
 
       <Image
          source={require('./assets/casal.jpg')}  // Caminho correto para a imagem
