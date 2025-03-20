@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic'
   },
   textoMedio: {
+    color: '#C7DB9C',
     fontSize: 20,
     fontWeight: 500,
     fontStyle: 'italic'
