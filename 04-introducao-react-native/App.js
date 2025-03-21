@@ -16,67 +16,62 @@ export default function App() {
   // retorno com SX
   return (
     <ScrollView>
+
       <View style={styles.container}>
-    
 
-    {/* Comentario do template JSX */}
+        <Text style={styles.textoGrande}>{nome}</Text>
+        <Text style={styles.textoGrande}>{3 + 4}</Text>
 
-    {/* Còdigo Javascript */}
 
-    
-    <Text style={styles.textoGrande}>{nome}</Text>
-    <Text style={styles.textoGrande}>{3 + 4}</Text>
-    
+        <Image
+          source={{ uri: 'https://i.pinimg.com/736x/fb/19/c4/fb19c40530191fd984f4e2b43593ddf4.jpg' }}
+          style={{
+            height: 300,
+            width: 300,
+          }}
+        />
+        <Text style={styles.textoMedio}>Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como ponta-esquerda ou avançado.</Text>
 
-    <Image
-       source={{uri: 'https://i.pinimg.com/736x/fb/19/c4/fb19c40530191fd984f4e2b43593ddf4.jpg'}} 
-       style={{ 
-         height: 300,
-         width: 300,  
-      }}
-    />
-    <Text style={styles.textoMedio}>Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como ponta-esquerda ou avançado.</Text>
+        <Image
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbpyOnkhD2-tBCVJPrl6T7q3HiGXp3_SClQ&s' }}
+          style={{
+            height: 300,
+            width: 300,
+          }}
+        />
+        <Text style={styles.textoMedio}>Salário: 200 milhões EUR (2024)</Text>
+        <Image
+          source={require('./imagens/image.png')}
+          style={{
+            height: 300,
+            width: 300,
+          }}
+        />
 
-<Image
-       source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbpyOnkhD2-tBCVJPrl6T7q3HiGXp3_SClQ&s'}} 
-       style={{ 
-         height: 300,
-         width: 300,  
-      }}
-    />
-<Text style={styles.textoMedio}>Salário: 200 milhões EUR (2024)</Text>
-    <Image
-    source={require('./imagens/image.png')}  
-    style={{
-      height: 300,
-      width: 300,
-    }}    
-   />
+        <Text style={styles.textoMedio}>Altura: 1,89 m</Text>
 
-    <Text style={styles.textoMedio}>Altura: 1,89 m</Text>
-    
-    <Image
-    source={require('./imagens/image2.png')}  
-    style={{
-      height: 300,
-      width: 300,
-    }}    
-    />
+        <Image
+          source={require('./imagens/image2.png')}
+          style={{
+            height: 300,
+            width: 300,
+          }}
+        />
 
-<Text style={styles.textoMedio}>Peso: 83 kg</Text>
-    
-    <Image
-    source={require('./imagens/image3.png')}  
-    style={{
-      height: 300,
-      width: 300,
-    }}    
-    />
+        <Text style={styles.textoMedio}>Peso: 83 kg</Text>
 
-<Button title='GOOL' onPress={alerta} color="#8AB2A6"></Button>
+        <Image
+          source={require('./imagens/image3.png')}
+          style={{
+            height: 300,
+            width: 300,
+          }}
+        />
 
-    <StatusBar style="auto" />
-  </View>
+        <Button title='GOOL' onPress={alerta} color="#8AB2A6"></Button>
+
+        <StatusBar style="auto" />
+      </View>
     </ScrollView>
   );
 }
@@ -88,7 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 50,
-    fontStyle:'italic',
+    fontStyle: 'italic',
 
   },
   textoGrande: {
