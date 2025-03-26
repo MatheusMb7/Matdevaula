@@ -5,6 +5,7 @@ import PrimeiroComponente from './componentes/PrimeiroComponente';
 import SegundoComponente from "./componentes/SegundoComponente";
 import JavaScriptComponente from './componentes/JavaScriptComponente';
 import Perfil from "./componentes/Perfil";
+import JavaScriptComponente from "./componentes/JavaScriptComponente";
 
 export default function App() {
   return (
