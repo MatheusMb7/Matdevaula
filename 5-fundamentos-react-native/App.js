@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import PrimeiroComponente from './componentes/PrimeiroComponente';
 import SegundoComponente from "./componentes/SegundoComponente";
-import JavaScriptComponente from "./componentes/JavaScriptComponente";
+import JavaScriptComponente from './componentes/JavaScriptComponente';
 import Perfil from "./componentes/Perfil";
 
 export default function App() {
