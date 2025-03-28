@@ -70,6 +70,7 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
+      <Text style={styles.header}>Filmes</Text>
         {
           listaFilmes.map(
             filmes => {
@@ -87,6 +88,7 @@ export default function App() {
           )
 
         }
+         <Text style={styles.header}>Séries</Text>
         {
           listaSeries.map(
             series => {
@@ -119,4 +121,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginVertical: 20,
+    textAlign: 'center',
+    width: '100%',
+    paddingVertical: 10,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+    marginBottom: 15,
+  }
 });
