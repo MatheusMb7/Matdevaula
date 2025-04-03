@@ -1,0 +1,82 @@
+
+<Button mode='contained' onPress={() => alert('clicou')}>Clicar</Button>
+        <Button mode='contained-tonal'>Clicar</Button>
+        <Button mode='elevated'>Clicar</Button>
+        <Button mode='outlined'>Clicar</Button>
+        <Button mode='text'>Clicar</Button>
+
+
+        <Text variant='bodyLarge'>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+        <Text variant='displayLarge'>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+        <Text variant='headlineLarge'>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+        <Text variant='labelLarge'>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+        <Text variant='titleLarge'>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+        <Text>Um texto qualquer</Text>
+        <Divider style={{width:'90%'}}/>
+      
+
+        <Card style={{margin: 10,backgroundColor: 'green'}}>
+          <Card.Title>
+            <Text>meu pau</Text>
+          </Card.Title>
+          <Card.Content>
+            <Title>Um Título</Title>
+            <Paragraph>Quando surge o alviverde imponente No gramado em que a luta o aguarda Sabe bem o que vem pela frente Que a dureza do prélio não tarda
+            E o Palmeiras no ardor da partida
+              Transformando a lealdade em padrão
+              Sabe sempre levar de vencida
+              E mostrar que de fato é campeão
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Por nosso alviverde inteiro</Paragraph>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Content>
+            <Title>Um Título</Title>
+            <Paragraph>Quando surge o alviverde imponente
+              No gramado em que a luta o aguarda
+              Sabe bem o que vem pela frente
+              Que a dureza do prélio não tarda
+              E o Palmeiras no ardor da partida
+              Transformando a lealdade em padrão
+              Sabe sempre levar de vencida
+              E mostrar que de fato é campeão
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Por nosso alviverde inteiro</Paragraph>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Content>
+            <Title>Um Título</Title>
+            <Paragraph>Quando surge o alviverde imponente
+              No gramado em que a luta o aguarda
+              Sabe bem o que vem pela frente
+              Que a dureza do prélio não tarda
+              E o Palmeiras no ardor da partida
+              Transformando a lealdade em padrão
+              Sabe sempre levar de vencida
+              E mostrar que de fato é campeão
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Defesa que ninguém passa
+              Linha atacante de raça
+              Torcida que canta e vibra
+              Por nosso alviverde inteiro</Paragraph>
+          </Card.Content>
+        </Card>
