@@ -1,0 +1,37 @@
+    // const listaCards= [
+      {
+        titulo:"Card 1",
+        descricao:"Lorem impsum Lorem impsumLorem impsumLorem impsum",
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE15rYe7pzpHIDnOwy7IUcXwngpwNgReO0Mw&s"
+      
+      },
+      {
+        titulo:"Card 1",
+        descricao:"Lorem impsum Lorem impsumLorem impsumLorem impsum",
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE15rYe7pzpHIDnOwy7IUcXwngpwNgReO0Mw&s"
+      },
+      {
+        titulo:"Card 1",
+        descricao:"Lorem impsum Lorem impsumLorem impsumLorem impsum",
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE15rYe7pzpHIDnOwy7IUcXwngpwNgReO0Mw&s"
+      },
+      {
+        titulo:"Card 1",
+        descricao:"Lorem impsum Lorem impsumLorem impsumLorem impsum",
+        imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE15rYe7pzpHIDnOwy7IUcXwngpwNgReO0Mw&s"
+      }
+   ] // 
+
+    //  data={listaCards}
+  
+    <FlatList  renderItem={({ item }) => (
+    <Card>
+      <Card.Content>
+        <Title>{item.titulo}</Title>
+        <Paragraph>{item.descricao}</Paragraph>
+
+      </Card.Content>
+      <Card.Cover source={{uri:item.imagem}}/>
+    </Card>
+      )}
+//   />
