@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
       paddingTop: 10
     },
     card: {
-        width: '100%', // Ocupa 100% da largura da tela
-        marginBottom: 10, // Espaçamento entre os cards
-        borderRadius: 0 // Remove as bordas arredondadas (opcional)
+        width: '100%',
+        marginBottom: 10, 
+        borderRadius: 0
     }
 
   })
