@@ -4,12 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import  { PaperProvider } from 'react-native-paper';
 import {Ionicons} from '@expo/vector-icons'
 
-import EscudoScreen from './componentes/screens/EscudoScreen'
-import JogadoresScreen from './componentes/screens/JogadoresScreen';
-import TitulosScreen from './componentes/screens/TitulosScreen';
+import EscudoScreen from './screens/EscudoScreen'
+import JogadoresScreen from './screens/JogadoresScreen';
+import TitulosScreen from './screens/TitulosScreen';
 import { color } from 'react-native/Libraries/NewAppScreen';
-
-
 
 
 const Tab = createBottomTabNavigator()
