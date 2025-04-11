@@ -33,7 +33,7 @@ export default function JogadoresScreen() {
 
         const renderItem = ({ item }) => (
             <Card style={styles.card}>
-                <Card.Cover source={{ uri: item.imagem }} />
+                <Card.Cover source={{ uri: item.imagem }} style={styles.image} />
                 <Card.Content>
                     <Title>{item.nome}</Title>
                     <Paragraph>{item.numero }</Paragraph>
@@ -44,7 +44,7 @@ export default function JogadoresScreen() {
     
         return (
             <View style={styles.container}>
-                <Text variant='headlineSmall' style={{ fontWeight: 'bold' }}>Jogadores Do Palmeiras</Text>
+                <Text variant='headlineSmall' style={{ fontWeight: 'bold' }}>Jogadores Do Palmeiras:</Text>
                 <FlatList
                     data={jogadores}
                     keyExtractor={(item, index) => index.toString()}
@@ -57,7 +57,7 @@ export default function JogadoresScreen() {
     
     const styles = StyleSheet.create({
         container: {
-            backgroundColor: 'white',
+            backgroundColor: '#4E9F3D',
             paddingTop: 10,
             flex: 1
         },
@@ -77,7 +77,6 @@ export default function JogadoresScreen() {
             borderRadius: 8
         },
         image: {
-            flex: 1,
-            height: 50
+            marginTop: 5,
         }
     });

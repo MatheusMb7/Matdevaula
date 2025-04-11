@@ -24,9 +24,11 @@ export default function App() {
            name='Escudo'
             component={EscudoScreen}
             options={{
-              title:'Tela de Ìnicio',
+              title:'Palmeiras',
               headerTitleAlign:'center',
+              headerTintColor: "#FFF",
               headerStyle: {
+                fontfamily:'serif',
                 backgroundColor:'#4E9F3D',
               },
               tabBarIcon: ({Color: size}) =><Ionicons name='shield' color={color} size={size}/>
@@ -37,9 +39,11 @@ export default function App() {
           name='Jogadores'
           component={JogadoresScreen} 
           options={{
-            title:'Tela de Ìnicio',
+            title:'Jogadores',
             headerTitleAlign:'center',
+            headerTintColor: "#FFF",
             headerStyle: {
+              fontfamily:'Times New Roman',
               backgroundColor:'green',
             },
             tabBarIcon: ({Color: size}) =><Ionicons name='person' color={color} size={size}/>
@@ -53,6 +57,7 @@ export default function App() {
           options={{
             title:'Títulos',
             headerTitleAlign:'center',
+            headerTintColor: "#FFF",
             headerStyle: {
               backgroundColor:'#1E5128',
             },
