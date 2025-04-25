@@ -1,9 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 
-import Feed from '../screens/Feed'
-import Home from '../screens/Home'
-import Posts from '../screens/Posts'
+
+import HomeScreen from '../screens/HomeScreen'
+import FeedScreen from '../screens/FeedScreen'
+import PostsScreen from '../screens/PostsScreen'
 
 const Stack = createStackNavigator()
 
@@ -11,9 +12,9 @@ export default function StackRoutes() {
   return (
     <Stack.Navigator>
 
-      <Stack.Screen name='Home' component={Home} />
-      <Stack.Screen name='Feed' component={Feed} />
-      <Stack.Screen name='Posts' component={Posts} />
+      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name='Feed' component={FeedScreen} />
+      <Stack.Screen name='Posts' component={PostsScreen} />
 
     </Stack.Navigator>
   )
