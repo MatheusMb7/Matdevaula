@@ -3,12 +3,12 @@ import React from 'react';
 
 export default function EscudoScreen() {
   const time = {
-    nome: "Flamengo",
-    escudo: "https://i.pinimg.com/236x/16/db/d2/16dbd20fd582e025dc54cc3fbd1839c9.jpg",
+    nome: "Palmeiras",
+    escudo: "https://i.pinimg.com/736x/96/a4/6d/96a46d845af876f648963f99df451e82.jpg",
     fundacao: "15 de novembro de 1895",
-    estadio: "Maracanã",
-    mascote: "Urubu",
-    cores: ["Vermelho", "Preto"]
+    estadio: "Allianz Parque",
+    mascote: "Porco",
+    cores: ["Verde", "Branco"]
   };
 
 
