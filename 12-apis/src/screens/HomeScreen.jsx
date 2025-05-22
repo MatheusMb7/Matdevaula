@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     paddingBottom: 50
   },
-  loadingContainer: {
+  loadingContainer: { 
     height: 750,
     alignItems: 'center',
     justifyContent: 'center'
