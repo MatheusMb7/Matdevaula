@@ -1,42 +1,59 @@
-import React, { useEffect, useState } from 'react'
-import { ScrollView, View } from 'react-native'
-import { Card, Text, Divider, ActivityIndicator, MD2Colors } from 'react-native-paper'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { Card, Text, ActivityIndicator, MD2Colors } from 'react-native-paper';
+import axios from 'axios';
 
 export default function ProdutoScreen({ route }) {
-  const idProduto = route.params
-  const [produto, setProduto] = useState(null)
+  const { idProduto } = route.params;
+  const [produto, setProduto] = useState(null);
 
   useEffect(() => {
     axios.get(`https://dummyjson.com/products/${idProduto}`)
       .then(res => setProduto(res.data))
-      .catch(() => alert('Erro ao buscar produto'))
-  }, [])
+      .catch(() => alert('Erro ao carregar produto'));
+  }, []);
 
   if (!produto) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator animating={true} color={MD2Colors.red800} size={80} />
-        <Text variant="titleMedium">Carregando...</Text>
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator animating color={MD2Colors.red800} size={80} />
+        <Text>Aguarde...</Text>
       </View>
-    )
+    );
   }
 
   return (
-    <ScrollView>
-      <Card style={{ margin: 10 }}>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Card>
         <Card.Cover source={{ uri: produto.thumbnail }} />
+        <Card.Title title={produto.title} subtitle={`R$ ${produto.price}`} />
         <Card.Content>
-          <Text variant="titleLarge">{produto.title}</Text>
+          <Text variant='titleMedium'>Descrição:</Text>
           <Text>{produto.description}</Text>
-          <Divider style={{ marginVertical: 10 }} />
-          <Text>Preço: R$ {produto.price}</Text>
-          <Text>Marca: {produto.brand}</Text>
-          <Text>Categoria: {produto.category}</Text>
-          <Text>Estoque: {produto.stock}</Text>
-          <Text>Avaliação: {produto.rating}</Text>
+          <Text variant='titleMedium' style={styles.topSpace}>Marca:</Text>
+          <Text>{produto.brand}</Text>
+          <Text variant='titleMedium' style={styles.topSpace}>Categoria:</Text>
+          <Text>{produto.category}</Text>
+          <Text variant='titleMedium' style={styles.topSpace}>Estoque:</Text>
+          <Text>{produto.stock} unidades</Text>
+          <Text variant='titleMedium' style={styles.topSpace}>Desconto:</Text>
+          <Text>{produto.discountPercentage}%</Text>
         </Card.Content>
       </Card>
     </ScrollView>
-  )
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  topSpace: {
+    marginTop: 10,
+  },
+});

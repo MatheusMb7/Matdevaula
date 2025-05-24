@@ -1,30 +1,30 @@
-import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from '../screens/HomeScreen'
-import ListaProdutosScreen from '../screens/ListaProdutosScreen'
-import ProdutoScreen from '../screens/ProdutoScreen'
+import HomeScreen from '../screens/HomeScreen';
+import ListaProdutosScreen from '../screens/ListaProdutosScreen';
+import ProdutoScreen from '../screens/ProdutoScreen';
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 export default function StackRoutes() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name='HomeScreen'
+        name="HomeScreen"
         component={HomeScreen}
-        options={{ title: "Categorias", headerTitleAlign: 'center' }}
+        options={{ title: 'Categorias', headerTitleAlign: 'center' }}
       />
       <Stack.Screen
-        name='ListaProdutosScreen'
+        name="ListaProdutosScreen"
         component={ListaProdutosScreen}
-        options={{ title: "Produtos", headerTitleAlign: 'center' }}
+        options={{ title: 'Produtos', headerTitleAlign: 'center' }}
       />
       <Stack.Screen
-        name='ProdutoScreen'
+        name="ProdutoScreen"
         component={ProdutoScreen}
-        options={{ title: "Detalhes do Produto", headerTitleAlign: 'center' }}
+        options={{ title: 'Detalhes do Produto', headerTitleAlign: 'center' }}
       />
     </Stack.Navigator>
-  )
+  );
 }
