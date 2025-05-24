@@ -7,7 +7,7 @@ export default function HomeScreen({ navigation }) {
   const [categorias, setCategorias] = useState([])
 
   useEffect(() => {
-    axios.get('https://dummyjson.com/products/category-list')
+    axios.get('https://dummyjson.com/products/categories')
       .then(res => setCategorias(res.data))
       .catch(() => alert('Erro ao buscar categorias'))
   }, [])

@@ -8,7 +8,7 @@ export default function ProdutoScreen({ route }) {
   const [produto, setProduto] = useState(null)
 
   useEffect(() => {
-    axios.get(`https://dummyjson.com/products/{idProduto}`)
+    axios.get(`https://dummyjson.com/products/${idProduto}`)
       .then(res => setProduto(res.data))
       .catch(() => alert('Erro ao buscar produto'))
   }, [])

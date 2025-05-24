@@ -8,7 +8,7 @@ export default function ListaProdutosScreen({ navigation, route }) {
   const [produtos, setProdutos] = useState([])
 
   useEffect(() => {
-    axios.get(`https://dummyjson.com/products/category/{categoria}`)
+    axios.get(`https://dummyjson.com/products/category/${categoria}`)
       .then(res => setProdutos(res.data.products))
       .catch(() => alert('Erro ao buscar produtos'))
   }, [])
