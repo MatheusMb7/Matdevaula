@@ -1,9 +1,6 @@
-import React from "react";
-
 import { NavigationContainer } from '@react-navigation/native';
 import { PaperProvider } from 'react-native-paper';
-
-import AlunoStack from "./src aluno/AlunoStack";
+import AlunoStack from './src/alunos/AlunoStack';
 
 export default function App() {
   return (
