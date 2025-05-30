@@ -2,17 +2,21 @@ import { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { TextInputMask } from 'react-native-masked-text'
 import { Button, Text, TextInput } from 'react-native-paper'
+import AlunoService from './AlunoService'
 
 
 export default function AlunoForm({ navigation, route }) {
-  const [nome, setNome] = useState('')
-  const [cpf, setCpf] = useState('')
-  const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState('')
-  const [dataNascimento, setDataNascimento] = useState('')
+
+  const alunoAntigo = route.params || {}
+
+  const [nome, setNome] = useState(alunoAntigo.nome || '')
+  const [cpf, setCpf] = useState(alunoAntigo.cpf || '')
+  const [email, setEmail] = useState(alunoAntigo.email || '')
+  const [telefone, setTelefone] = useState(alunoAntigo.telefone || '')
+  const [dataNascimento, setDataNascimento] = useState(alunoAntigo.dataNascimento || '')
 
 
-  function salvar() {
+  async function salvar() {
     const aluno = {
       nome,
       cpf,
@@ -23,15 +27,36 @@ export default function AlunoForm({ navigation, route }) {
 
     if (!aluno.nome || !aluno.cpf || !aluno.email || !aluno.telefone || !aluno.dataNascimento) {
       alert('Preencha todos os campos!!!')
-    } else {
-      alert(JSON.stringify(aluno))
+      return
     }
 
+    if (alunoAntigo.id) {
+      // Atualizar um aluno
+      aluno.id = alunoAntigo.id
+      await AlunoService.atualizar(aluno)
+      alert('Aluno atualizado com sucesso')
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'AlunoLista' }]
+      })
+    } else {
+
+
+      await AlunoService.salvar(aluno)
+      alert('Aluno criado com sucesso')
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'AlunoLista' }]
+      })
+    }
   }
+
 
   return (
     <View style={styles.container}>
       <Text variant='titleLarge' style={{ marginTop: 10 }}>Informe os dados:</Text>
+      <Text variant='titleLarge' style={{ marginTop: 10 }}>Aluno ID: {alunoAntigo.id || 'NOVO'}</Text>
+
 
       <TextInput
         label='Nome'

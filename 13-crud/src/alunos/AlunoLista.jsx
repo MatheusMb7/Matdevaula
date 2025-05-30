@@ -16,6 +16,11 @@ export default function AlunoLista({ navigation , route }) {
     setAlunos(listaAlunos)
   }
 
+  async function excluirAluno(id) {
+    await AlunoService.remover(id)
+    buscarAlunos()
+    alert('Aluno excluido com sucesso')
+  }
 
   return (
     <View>
@@ -38,8 +43,8 @@ export default function AlunoLista({ navigation , route }) {
               <Text>CPF: {item.cpf}</Text>
             </Card.Content>
             <Card.Actions>
-              <Button icon='pencil'> </Button>
-              <Button icon='delete'> </Button>
+              <Button icon='pencil' onPress={() => navigation.navigate('AlunoForm', item)}> </Button>
+              <Button icon='delete' onPress={() => excluirAluno(item.id)}> </Button>
             </Card.Actions>
           </Card>
         )}
